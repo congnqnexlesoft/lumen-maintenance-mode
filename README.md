@@ -1,6 +1,6 @@
 # Lumen maintenance mode
 - *Author: https://github.com/rdehnhardt/lumen-maintenance-mode*
-- `congnq` clone and update for `Lumen 6.x` and `PHP 7.4`
+- `congnqnexlesoft` clone and update for `Lumen 6.x` and `PHP 7.4`
 
 ## How to install
 
