@@ -15,7 +15,7 @@ composer require congnqnexlesoft/lumen-maintenance-mode
 ```
 
 ## How to configure
-In bootstrap/app.php, add this instruction in providers
+In `bootstrap/app.php`, add this instruction in providers
 
 ```PHP
 $app->register(CongnqNexlesoft\MaintenanceMode\Providers\MaintenanceModeServiceProvider::class);
@@ -35,21 +35,21 @@ resources/views/errors/503.blade.php
 
 ## Put the application into maintenance mode.
 
-```
+```shell
 php artisan down
 ```
 
 ## Bring the application out of maintenance mode.
 
-```
+```shell
 php artisan up
 ```
 
 ## IP released for access
 
-In .env file
+In `.env` file
 
-```
+```dotenv
 ALLOWED_IPS=999.99.9.999,999.99.9.999,999.99.9.999
 ```
 
