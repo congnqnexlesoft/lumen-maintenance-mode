@@ -1,0 +1,49 @@
+{
+  "name": "congnqnexlesoft/lumen-maintenance-mode",
+  "type": "library",
+  "description": "Define application maintenance mode.",
+  "keywords": [
+    "lumen",
+    "maintenance",
+    "mode"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cong Nguyen Quang",
+      "email": "congnqnexlesoft@gmail.com"
+    },
+    {
+      "name": "Renato Dehnhardt",
+      "email": "renatotkd@gmail.com"
+    },
+    {
+      "name": "Vagner do Carmo",
+      "email": "vluzrmos@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "laravel/lumen-framework": "^6.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "CongnqNexlesoft\\MaintenanceMode\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CongnqNexlesoft\\MaintenanceMode\\": "src"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "kylekatarnls/update-helper": false
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
