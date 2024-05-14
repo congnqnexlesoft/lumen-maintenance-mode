@@ -28,9 +28,10 @@ $app->register(CongnqNexlesoft\MaintenanceMode\Providers\MaintenanceModeServiceP
 MAINTENANCE_RESPONSE_FORMAT=json
 ```
 ### Using View
-- Copy this file to your project `src/resources/views/errors/503.blade.php`
+- Copy these files to your project:
 ```
 resources/views/errors/503.blade.php
+storage/framework/.gitignore
 ```
 
 ## Put the application into maintenance mode.
