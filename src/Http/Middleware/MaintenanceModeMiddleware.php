@@ -39,6 +39,11 @@ class MaintenanceModeMiddleware
      */
     public function handle($request, Closure $next)
     {
+        // except URIs
+        if ($this->inExceptArray($request)) {
+            return $next($request);
+        }
+        // handle
         if ($this->maintenance->isDownMode() && !$this->maintenance->checkAllowedIp($this->getIp())) {
             // Response uses JSON (required config .env)
             if (strtolower(getenv('MAINTENANCE_RESPONSE_FORMAT')) === 'json') {
@@ -61,6 +66,26 @@ class MaintenanceModeMiddleware
         }
 
         return $next($request);
+    }
+
+    /**
+     * Need an ENV: EXCEPT_URIS
+     * Determine if the request has a URI that should be accessible in maintenance mode.
+     * @param Request $request
+     * @return bool
+     */
+    protected function inExceptArray($request)
+    {
+        $exceptURIs = explode(',', getenv('EXCEPT_URIS'));
+        foreach ($exceptURIs as $except) {
+            if ($except !== '/') {
+                $except = trim($except, '/');
+            }
+            if ($request->fullUrlIs($except) || $request->is($except)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

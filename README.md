@@ -24,8 +24,11 @@ $app->register(CongnqNexlesoft\MaintenanceMode\Providers\MaintenanceModeServiceP
 ### Using JSON
 - Require config the line below to your `.env` file
 ```dotenv
-## congnqnexlesoft/lumen-maintenance-mode ##
+## [BEGIN] congnqnexlesoft/laravel-maintenance-mode, lumen-maintenance-mode, symfony-maintenance-mode ##
 MAINTENANCE_RESPONSE_FORMAT=json
+#    separate by ,(comma)
+EXCEPT_URIS=URI_1,URI_2
+## [END] congnqnexlesoft/laravel-maintenance-mode, lumen-maintenance-mode, symfony-maintenance-mode ##
 ```
 ### Using View
 - Copy these files to your project:
