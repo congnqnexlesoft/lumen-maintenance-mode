@@ -21,7 +21,9 @@ In `bootstrap/app.php`, add this instruction in providers
 $app->register(CongnqNexlesoft\MaintenanceMode\Providers\MaintenanceModeServiceProvider::class);
 ```
 ## Response
-### Using JSON
+### Features:
+- **Using JSON response**
+- **Except URIs**
 - Require config the line below to your `.env` file
 ```dotenv
 ## [BEGIN] congnqnexlesoft/laravel-maintenance-mode, lumen-maintenance-mode, symfony-maintenance-mode ##
